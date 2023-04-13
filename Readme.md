@@ -1,6 +1,6 @@
 # Find A Coach App
 
-### Link to App: https://find-a-coach-vuejs-app.web.app/
+### Link to App: https://find-my-coach-app.surge.sh/
 
 #### Frontend: Vue.js Framework, Vuex, Vue Router
 #### Backend: Firebase
