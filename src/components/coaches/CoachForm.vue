@@ -8,7 +8,7 @@
           v-model.trim="firstName.val"
           @blur="clearValidity('firstName')"
         />
-        <p v-if="!firstName.isValid">First name must not be empty.</p>
+        <p v-if="!firstName.isValid">First name must not be empty and less then 16 chars.</p>
       </div>
       <div class="form-control" :class="{invalid: !lastName.isValid}">
         <label for="lastname">Lastname</label>
@@ -18,7 +18,7 @@
           v-model.trim="lastName.val"
           @blur="clearValidity('lastName')"
         />
-        <p v-if="!lastName.isValid">Last name must not be empty.</p>
+        <p v-if="!lastName.isValid">Last name must not be empty and less then 16 chars.</p>
       </div>
       <div class="form-control" :class="{invalid: !description.isValid}">
         <label for="description">Description</label>
@@ -108,11 +108,11 @@
       },
       validateForm() {
         this.formIsValid = true;
-        if (this.firstName.val === '') {
+        if (this.firstName.val === '' || this.firstName.val.length > 15) {
           this.firstName.isValid = false;
           this.formIsValid = false;
         }
-        if (this.lastName.val === '') {
+        if (this.lastName.val === '' || this.firstName.val.length > 15) {
           this.lastName.isValid = false;
           this.formIsValid = false;
         }
